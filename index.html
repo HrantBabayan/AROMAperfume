@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AROMAperfume</title>
+    <link rel="icon" href="../website/logo.png">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Include this script tag or install `@tailwindplus/elements` via npm: -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script> -->
+    <div class="bg-white">
+        <header class="absolute inset-x-0 top-0 z-50">
+            <nav aria-label="Global" class="flex items-center justify-between p-6 lg:px-8">
+                <div class="flex lg:flex-1">
+                    <a href="#" class="-m-1.5 p-1.5">
+                        <span class="sr-only">Perfume</span>
+                        <img src="./logo.png" alt="" class="h-28 w-auto" />
+                    </a>
+                </div>
+                <div class="flex lg:hidden">
+                    <button type="button" command="show-modal" commandfor="mobile-menu"
+                        class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                        <span class="sr-only">Open main menu</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon"
+                            aria-hidden="true" class="size-6">
+                            <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="hidden lg:flex lg:gap-x-12">
+                    <a href="#" class="text-sm/6 font-semibold text-[#802b39]">Product</a>
+                    <a href="#" class="text-sm/6 font-semibold text-[#802b39]">Features</a>
+                    <a href="#" class="text-sm/6 font-semibold text-[#802b39]">Marketplace</a>
+                    <a href="#" class="text-sm/6 font-semibold text-[#802b39]">Company</a>
+                </div>
+                <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+                    <a href="#" class="text-sm/6 font-semibold text-[#802b39]">Log in <span
+                            aria-hidden="true">&rarr;</span></a>
+                </div>
+            </nav>
+            <el-dialog>
+                <dialog id="mobile-menu" class="backdrop:bg-transparent lg:hidden">
+                    <div tabindex="0" class="fixed inset-0 focus:outline-none">
+                        <el-dialog-panel
+                            class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+                            <div class="flex items-center justify-between">
+                                <a href="#" class="-m-1.5 p-1.5">
+                                    <span class="sr-only">Your Company</span>
+                                    <img src="./logo.png" alt="" class="h-28 w-auto" />
+                                </a>
+                                <button type="button" command="close" commandfor="mobile-menu"
+                                    class="-m-2.5 rounded-md p-2.5 text-gray-700">
+                                    <span class="sr-only">Close menu</span>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                        data-slot="icon" aria-hidden="true" class="size-6">
+                                        <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="mt-6 flow-root">
+                                <div class="-my-6 divide-y divide-gray-500/10">
+                                    <div class="space-y-2 py-6">
+                                        <a href="#"
+                                            class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-[#802b39] ">Product</a>
+                                        <a href="#"
+                                            class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-[#802b39] ">Features</a>
+                                        <a href="#"
+                                            class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-[#802b39] ">Marketplace</a>
+                                        <a href="#"
+                                            class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-[#802b39] ">Company</a>
+                                    </div>
+                                    <div class="py-6">
+                                        <a href="#"
+                                            class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-[#802b39] ">Log
+                                            in</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </el-dialog-panel>
+                    </div>
+                </dialog>
+            </el-dialog>
+        </header>
+
+        <div class="relative isolate px-6 pt-14 lg:px-8">
+            <div aria-hidden="true"
+                class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80">
+                <div style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
+                    class="relative left-[calc(50%-11rem)] aspect-1155/678 w-144.5 -translate-x-1/2 rotate-30 bg-linear-to-tr from-[#ffd4a0] to-[#ff0000]  sm:left-[calc(50%-30rem)] sm:w-288.75">
+                </div>
+            </div>
+            <div class="mx-auto max-w-3xl py-32 sm:py-48 lg:py-56">
+                <div class="hidden sm:mb-8 sm:flex sm:justify-center">
+                    <div
+                        class="relative rounded-full px-3 py-1 text-sm/6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+                        Announcing our next round of funding. <a href="#" class="font-semibold text-[#802b39]"><span
+                                aria-hidden="true" class="absolute inset-0"></span>Read more <span
+                                aria-hidden="true">&rarr;</span></a>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <h1 class="text-5xl font-semibold tracking-tight text-balance text-[#802b39] sm:text-7xl">Your
+                        Armor. Your Signature. Your Scent.</h1>
+                    <p class="mt-8 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">In a world of noise,
+                        leave a whisper that speaks volumes. Our perfume is not for the crowd; it's for the individual.
+                    </p>
+                    <div class="mt-10 flex items-center justify-center gap-x-6">
+                        <a href="#"
+                            class="rounded-md bg-[#efcfa8] text-[#802b39] px-3.5 py-2.5 text-sm font-semibold shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get
+                            started</a>
+                        <a href="#" class="text-sm/6 font-semibold text-gray-900">Learn more <span
+                                aria-hidden="true">→</span></a>
+                    </div>
+                </div>
+            </div>
+            <div aria-hidden="true"
+                class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
+                <div style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
+                    class="relative left-[calc(50%+3rem)] aspect-1155/678 w-144.5 -translate-x-1/2 bg-linear-to-tr from-[#ffd4a0] to-[#ff0000]  sm:left-[calc(50%+36rem)] sm:w-288.75">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white">
+        <div class="mx-auto max-w-2xl px-4  sm:px-6 py-14 lg:max-w-7xl max-lg:w-full lg:px-8">
+            <h2 class="text-2xl font-bold tracking-tight text-[#802b39]">Bestsellers</h2>
+
+            <div class="mt-6 gap-3  flex max-lg:flex-wrap justify-center ">
+                <div
+                    class="group relative border border-[#802b39] p-3 rounded-2xl shadow-2xl max-sm:w-[200px] sm:w-[300px] bg-white transition-all duration-500 hover:-translate-y-3">
+                    <img src="https://lifestyleperfume.am/images/product/5773/400/1758267777.webp"
+                        alt="Front of men&#039;s Basic Tee in black."
+                        class="aspect-square transition-all w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80" />
+                    <div class="mt-4 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-sm text-[#802b39]">
+                                <a href="#">
+                                    <span aria-hidden="true" class="absolute inset-0"></span>
+                                    Goddess Parfum Parfum 100 мл
+                                </a>
+                            </h3>
+                        </div>
+                        <p class="text-sm font-medium text-gray-900">75 000 ֏</p>
+                    </div>
+                </div>
+                <div
+                    class="group relative border border-[#802b39] p-3 rounded-2xl shadow-2xl max-sm:w-[200px] sm:w-[300px] bg-white transition-all duration-500 hover:-translate-y-3">
+                    <img src="https://lifestyleperfume.am/images/product/5762/400/1757680808.webp"
+                        alt="Front of men&#039;s Basic Tee in white."
+                        class="aspect-square transition-all w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80" />
+                    <div class="mt-4 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-sm text-[#802b39]">
+                                <a href="#">
+                                    <span aria-hidden="true" class="absolute inset-0"></span>
+                                    Guidance 46 Extrait de Parfum 100 мл
+                                </a>
+                            </h3>
+                        </div>
+                        <p class="text-sm font-medium text-gray-900">220 000 ֏</p>
+                    </div>
+                </div>
+                <div
+                    class="group relative border border-[#802b39] p-3 rounded-2xl shadow-2xl max-sm:w-[200px] sm:w-[300px]  bg-white transition-all duration-500 hover:-translate-y-3">
+                    <img src="https://lifestyleperfume.am/images/product/5761/1757679682.webp"
+                        alt="Front of men&#039;s Basic Tee in dark gray."
+                        class="aspect-square transition-all w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80" />
+                    <div class="mt-4 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-sm text-[#802b39]">
+                                <a href="#">
+                                    <span aria-hidden="true" class="absolute inset-0"></span>
+                                    Purpose 50 Extrait de Parfum 100 мл
+                                </a>
+                            </h3>
+                        </div>
+                        <p class="text-sm font-medium text-gray-900">220 000 ֏</p>
+                    </div>
+                </div>
+                <div
+                    class="group relative border border-[#802b39] p-3 rounded-2xl shadow-2xl max-sm:w-[200px] sm:w-[300px] bg-white transition-all duration-500 hover:-translate-y-3">
+                    <img src="https://lifestyleperfume.am/images/product/5759/1757678136.webp"
+                        alt="Front of men&#039;s Artwork Tee in peach with white and brown dots forming an isometric cube."
+                        class="aspect-square transition-all w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80" />
+                    <div class="mt-4 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-sm  text-[#802b39]">
+                                <a href="#">
+                                    <span aria-hidden="true" class="absolute inset-0"></span>
+                                    Aldebaran Eau de parfum 30 мл
+                                </a>
+                            </h3>
+                        </div>
+                        <p class="text-sm font-medium text-gray-900">59 000 ֏</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div id="default-carousel" class="relative max-w-7xl mx-auto" data-carousel="slide">
+        <!-- Carousel wrapper -->
+        <div class="relative h-[300px] overflow-hidden rounded-lg md:h-[600px]">
+            <!-- Item 1 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="https://lifestyleperfume.am/images/slider/1749983390-6-.webp"
+                    class="absolute object-contain block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                    alt="...">
+            </div>
+            <!-- Item 2 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="https://lifestyleperfume.am/images/slider/1749983413-1-.webp"
+                    class="absolute object-contain block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                    alt="...">
+            </div>
+            <!-- Item 3 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="https://lifestyleperfume.am/images/slider/1749983424-3-.webp"
+                    class="absolute object-contain block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                    alt="...">
+            </div>
+            <!-- Item 4 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="https://lifestyleperfume.am/images/slider/1749983460-10-.webp"
+                    class="absolute object-contain block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                    alt="...">
+            </div>
+            <!-- Item 5 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="https://lifestyleperfume.am/images/slider/1749983483-7-.webp"
+                    class="absolute object-contain block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                    alt="...">
+            </div>
+        </div>
+        <!-- Slider indicators -->
+        <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1"
+                data-carousel-slide-to="0"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2"
+                data-carousel-slide-to="1"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3"
+                data-carousel-slide-to="2"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4"
+                data-carousel-slide-to="3"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5"
+                data-carousel-slide-to="4"></button>
+        </div>
+        <!-- Slider controls -->
+        <button type="button"
+            class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            data-carousel-prev>
+            <span
+                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M5 1 1 5l4 4" />
+                </svg>
+                <span class="sr-only">Previous</span>
+            </span>
+        </button>
+        <button type="button"
+            class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            data-carousel-next>
+            <span
+                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m1 9 4-4-4-4" />
+                </svg>
+                <span class="sr-only">Next</span>
+            </span>
+        </button>
+    </div>
+
+    <div class="flex max-w-7xl mx-auto gap-3 max-lg:flex-wrap justify-center items-start max-lg:p-3">
+        <div class="w-[400px] tr duration-500 lg:hover:scale-105 cursor-pointer max-sm:w-full max-lg:w-full">
+            <img src="https://lifestyleperfume.am/images/category/1751009992.webp" class="w-full" alt="">
+            <h2 class="font-bold mt-3">Женская парфюмерия</h2>
+            <br>
+            <p class="text-sm">Парфюм — это особое искусство, способное подчеркнуть изящество, вкус и безупречный стиль
+                женщины.
+                Один
+                аромат может полностью преобразить образ, придать ему элегантность, чувственность и шарм. Наша
+                коллекция
+                женских ароматов создана для того, чтобы раскрыть вашу индивидуальность и сделать каждый момент
+                незабываемым.
+            </p>
+        </div>
+        <div class="w-[400px] tr duration-500 lg:hover:scale-105 cursor-pointer max-sm:w-full max-lg:w-full">
+            <img src="https://lifestyleperfume.am/images/category/1751010008.webp" class="w-full" alt="">
+            <h2 class="font-bold mt-3">Мужская парфюмерия</h2>
+            <br>
+            <p class="text-sm">Фото
+                Мужская парфюмерия
+                Парфюм — это мощный акцент в мужском образе, подчеркивающий силу, стиль и харизму. Правильно
+                подобранный
+                аромат говорит о вкусе и уверенности. Коллекция мужских ароматов создана для тех, кто стремится к
+                индивидуальности и оставляет яркое впечатление.
+
+            </p>
+        </div>
+        <div class="w-[400px] tr duration-500 lg:hover:scale-105 cursor-pointer max-sm:w-full max-lg:w-full">
+            <img src="https://lifestyleperfume.am/images/category/1751010023.webp" class="w-full" alt="">
+            <h2 class="font-bold mt-3">Нишевая парфюмерия</h2>
+            <br>
+            <p class="text-sm">Нишевая парфюмерия — это искусство аромата, созданное для тех, кто ценит
+                индивидуальность, глубину и
+                эксклюзивность. Каждый аромат раскрывает характер и эмоции, выходя за рамки стандартов и
+                моды.</p>
+        </div>
+        <div class="w-[400px] tr duration-500 lg:hover:scale-105 cursor-pointer max-sm:w-full max-lg:w-full">
+            <img src="https://lifestyleperfume.am/images/category/1751010046.webp" class="w-full" alt="">
+            <h2 class="font-bold mt-3">Распив</h2>
+            <br>
+            <p class="text-sm">Хотите протестировать аромат перед покупкой? С услугой Try Me (распив) вы можете заказать
+                мини-версию
+                понравившегося парфюма и протестировать его дома. Это идеальный способ познакомиться с ароматом —без
+                лишнего риска и переплат.</p>
+        </div>
+    </div>
+    <div id="default-carousel" class="relative max-w-7xl my-12 mx-auto" data-carousel="slide">
+        <!-- Carousel wrapper -->
+        <div class="relative  h-[300px] overflow-hidden rounded-lg md:h-[600px]">
+            <!-- Item 1 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="https://www.perfume.com/blog/wp-content//uploads/2024/08/What-Types-of-Perfumes-Last-the-Longest.jpg"
+                    class="absolute object-cover block size-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                    alt="...">
+            </div>
+            <!-- Item 2 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="https://www.guerlain.com/on/demandware.static/-/Sites-GSA_US_Catalog/default/dwa6ac0641/HeroBanner_NewTemplate/Fragrance/A&M/AM-VETIVER_HEADER-BANNER_PLP_DESKTOP.jpg"
+                    class="absolute object-cover block size-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                    alt="...">
+            </div>
+            <!-- Item 3 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="https://cdn4.beautinow.com/wp-content/uploads/2024/08/Blog.webp"
+                    class="absolute object-cover block size-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                    alt="...">
+            </div>
+            <!-- Item 4 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="https://cdn.shopify.com/s/files/1/0591/0180/6670/files/GIORGIO_ARMANI_b6bba99e-b015-438e-b005-3269747acad0.png?v=1729332983"
+                    class="absolute object-cover block size-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                    alt="...">
+            </div>
+            <!-- Item 5 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="https://perfumepalace.in/cdn/shop/files/25_0feb53d1-7b72-4519-872f-c17c60136a4d.png?v=1761388468&width=2400"
+                    class="absolute object-cover block size-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                    alt="...">
+            </div>
+        </div>
+        <!-- Slider indicators -->
+        <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1"
+                data-carousel-slide-to="0"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2"
+                data-carousel-slide-to="1"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3"
+                data-carousel-slide-to="2"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4"
+                data-carousel-slide-to="3"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5"
+                data-carousel-slide-to="4"></button>
+        </div>
+        <!-- Slider controls -->
+        <button type="button"
+            class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            data-carousel-prev>
+            <span
+                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M5 1 1 5l4 4" />
+                </svg>
+                <span class="sr-only">Previous</span>
+            </span>
+        </button>
+        <button type="button"
+            class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            data-carousel-next>
+            <span
+                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m1 9 4-4-4-4" />
+                </svg>
+                <span class="sr-only">Next</span>
+            </span>
+        </button>
+    </div>
+
+    
+
+<footer class="bg-white rounded-lg shadow-sm     m-4">
+    <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+        <div class="sm:flex sm:items-center sm:justify-between">
+            <a href="https://flowbite.com/" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+                <img src="../website/logo.png" class="h-28" alt="AROMAperfume" />
+                <span class="self-center text-2xl font-semibold whitespace-nowrap text-[#802b39]">AROMAperfume</span>
+            </a>
+            <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-[#802b39] sm:mb-0 text-[#802b39]">
+                <li>
+                    <a href="#" class="hover:underline me-4 md:me-6">About</a>
+                </li>
+                <li>
+                    <a href="#" class="hover:underline me-4 md:me-6">Privacy Policy</a>
+                </li>
+                <li>
+                    <a href="#" class="hover:underline me-4 md:me-6">Licensing</a>
+                </li>
+                <li>
+                    <a href="#" class="hover:underline">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <hr class="my-6 border-[#802b39] sm:mx-auto border-[802b39] lg:my-8" />
+        <span class="block text-sm text-[#802b39] sm:text-center text-[802b39]">© 2025 <a href="https://flowbite.com/" class="hover:underline">Flowbite™</a>. All Rights Reserved.</span>
+    </div>
+</footer>
+
+
+
+</body>
+
+</html>
